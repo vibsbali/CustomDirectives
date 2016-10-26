@@ -10,5 +10,11 @@
                 { name: "Bananas", category: "Fruit", price: 2.42, expiry: 7 },
                 { name: "Pears", category: "Fruit", price: 2.02, expiry: 6 }
             ];
+
+            vm.incrementPrices = function() {
+                for (var i = 0; i < vm.products.length; i++) {
+                    vm.products[i].price++;
+                }
+            };
         });
 }());
