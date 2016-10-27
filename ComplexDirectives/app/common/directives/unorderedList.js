@@ -4,6 +4,7 @@
         .directive("unorderedList", function () {
             return {
                 restrict: "AE",
+                replace: true,
                 templateUrl: function (elem, attrs) {
                     return attrs["template"] === "table" ? "/app/common/templates/tableTemplate.html" : "/app/common/templates/itemTemplate.html";
                 },
