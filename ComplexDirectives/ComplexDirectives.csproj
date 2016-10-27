@@ -78,6 +78,8 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\common\directives\unorderedList.js" />
+    <Content Include="app\common\templates\itemTemplate.html" />
+    <Content Include="app\common\templates\tableTemplate.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
