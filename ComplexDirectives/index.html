@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="exampleApp">
+<head>
+    <title>Custom Directives</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="defaultController as vm">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Products</h3>
+        </div>
+        <div class="panel-body">
+            <button class="btn btn-primary" ng-click="vm.incrementPrices()">
+                Change Prices
+            </button>
+        </div>
+        <div class="panel-body">
+            <unordered-list property-name="vm.products" list-property="price | currency"></unordered-list>
+            
+        </div>
+    </div>
+
+
+    <!--Libraries-->
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+
+    <!--Custom Angular Modules-->
+    <script src="app/app.js"></script>
+
+    <!--Custom Angular Directives-->
+    <script src="app/common/directives/unorderedList.js"></script>
+</body>
+</html>
