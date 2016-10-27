@@ -2,15 +2,17 @@
 (function () {
     angular.module("exampleApp")
         .directive("unorderedList", function () {
-            return{
+            return {
                 restrict: "AE",
-                templateUrl: function () { return "/app/common/templates/itemTemplate.html" },
+                templateUrl: function (elem, attrs) {
+                    return attrs["template"] === "table" ? "/app/common/templates/tableTemplate.html" : "/app/common/templates/itemTemplate.html";
+                },
                 link: function (scope, element, attrs) {
                     var dataValue = attrs["propertyName"] || attrs["unorderedList"];
                     scope.data = scope.$eval(dataValue);
                     //var data = scope.vm.products;
                     var propertyExpression = attrs["listProperty"] || "price | currency";
-                    
+
                     //if (angular.isArray(data)) {
                     //    var listElem = angular.element("<ul>");
                     //    element.append(listElem);
